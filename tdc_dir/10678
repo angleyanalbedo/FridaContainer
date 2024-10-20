@@ -1,0 +1,20 @@
+{"tid": 10678, "status": "entry", "tname": "Thread-15", "classname": "com.cj.webapp_Start.base.WebApplication$$ExternalSyntheticLambda1", "method": "void com.cj.webapp_Start.base.WebApplication$$ExternalSyntheticLambda1#run()", "args": {}, "tryval": {}}
+[+] (entry) com.cj.webapp_Start.base.WebApplication$$ExternalSyntheticLambda1
+|-> void com.cj.webapp_Start.base.WebApplication$$ExternalSyntheticLambda1#run()
+
+
+{"tid": 10678, "status": "entry", "tname": "Thread-15", "classname": "com.cj.webapp_Start.base.WebApplication", "method": "void com.cj.webapp_Start.base.WebApplication#lambda$onCreate$0$com-cj-webapp_Start-base-WebApplication()", "args": {}, "tryval": {}}
+[+] (entry) com.cj.webapp_Start.base.WebApplication
+|-> void com.cj.webapp_Start.base.WebApplication#lambda$onCreate$0$com-cj-webapp_Start-base-WebApplication()
+
+
+{"tid": 10678, "status": "exit", "tname": "Thread-15", "classname": "com.cj.webapp_Start.base.WebApplication", "method": "void com.cj.webapp_Start.base.WebApplication#lambda$onCreate$0$com-cj-webapp_Start-base-WebApplication()", "tryval": {}}
+[+] (exit) com.cj.webapp_Start.base.WebApplication
+|-> void com.cj.webapp_Start.base.WebApplication#lambda$onCreate$0$com-cj-webapp_Start-base-WebApplication()
+
+
+{"tid": 10678, "status": "exit", "tname": "Thread-15", "classname": "com.cj.webapp_Start.base.WebApplication$$ExternalSyntheticLambda1", "method": "void com.cj.webapp_Start.base.WebApplication$$ExternalSyntheticLambda1#run()", "tryval": {}}
+[+] (exit) com.cj.webapp_Start.base.WebApplication$$ExternalSyntheticLambda1
+|-> void com.cj.webapp_Start.base.WebApplication$$ExternalSyntheticLambda1#run()
+
+

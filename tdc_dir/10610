@@ -1,0 +1,30 @@
+{"tid": 10610, "status": "entry", "tname": "main", "classname": "com.cj.webapp_Start.base.WebApplication$$ExternalSyntheticLambda1_$init", "method": "<class: com.cj.webapp_Start.base.WebApplication$$ExternalSyntheticLambda1>", "method_": "WebApplication$$ExternalSyntheticLambda1", "args": {"0": "<instance: com.cj.webapp_Start.base.WebApplication>"}, "tryval": {}}
+[+] (entry) com.cj.webapp_Start.base.WebApplication$$ExternalSyntheticLambda1_$init
+|-> <class: com.cj.webapp_Start.base.WebApplication$$ExternalSyntheticLambda1>
+|- <instance: com.cj.webapp_Start.base.WebApplication>
+
+{"tid": 10610, "status": "exit", "tname": "main", "classname": "com.cj.webapp_Start.base.WebApplication$$ExternalSyntheticLambda1", "method": "<class: com.cj.webapp_Start.base.WebApplication$$ExternalSyntheticLambda1>", "tryval": {}}
+[+] (exit) com.cj.webapp_Start.base.WebApplication$$ExternalSyntheticLambda1
+|-> <class: com.cj.webapp_Start.base.WebApplication$$ExternalSyntheticLambda1>
+
+
+{"tid": 10610, "status": "entry", "tname": "main", "classname": "com.cj.webapp_Start.base.WebApplication", "method": "com.p2p.P2PClass com.cj.webapp_Start.base.WebApplication#getp2p()", "args": {}, "tryval": {}}
+[+] (entry) com.cj.webapp_Start.base.WebApplication
+|-> com.p2p.P2PClass com.cj.webapp_Start.base.WebApplication#getp2p()
+
+
+{"tid": 10610, "status": "exit", "tname": "main", "classname": "com.cj.webapp_Start.base.WebApplication", "method": "com.p2p.P2PClass com.cj.webapp_Start.base.WebApplication#getp2p()", "retval": "<instance: com.p2p.P2PClass>", "tryval": {}}
+[+] (exit) com.cj.webapp_Start.base.WebApplication
+|-> com.p2p.P2PClass com.cj.webapp_Start.base.WebApplication#getp2p()
+|= <instance: com.p2p.P2PClass>
+
+{"tid": 10610, "status": "entry", "tname": "main", "classname": "com.cj.webapp_Start.base.WebApplication", "method": "com.p2p.P2PClass com.cj.webapp_Start.base.WebApplication#getp2p()", "args": {}, "tryval": {}}
+[+] (entry) com.cj.webapp_Start.base.WebApplication
+|-> com.p2p.P2PClass com.cj.webapp_Start.base.WebApplication#getp2p()
+
+
+{"tid": 10610, "status": "exit", "tname": "main", "classname": "com.cj.webapp_Start.base.WebApplication", "method": "com.p2p.P2PClass com.cj.webapp_Start.base.WebApplication#getp2p()", "retval": "<instance: com.p2p.P2PClass>", "tryval": {}}
+[+] (exit) com.cj.webapp_Start.base.WebApplication
+|-> com.p2p.P2PClass com.cj.webapp_Start.base.WebApplication#getp2p()
+|= <instance: com.p2p.P2PClass>
+

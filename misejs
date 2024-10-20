@@ -1,0 +1,149 @@
+// let DeviceUtil = Java.use("com.sealviewer.coremodel.util.DeviceUtil");
+    // DeviceUtil["isRunningOnEmulator"].implementation = function () {
+    //     console.log(`DeviceUtil.isRunningOnEmulator is called`);
+    //     let result = this["isRunningOnEmulator"]();
+    //     console.log(`DeviceUtil.isRunningOnEmulator result=${result}`);
+    //     return result;
+    // };
+    // FCAnd.traceJavaMethods_custom(['M:com.sealviewer.video.ChooseLoginDialogFragment']);
+    let LoginViewModel = Java.use("com.sealviewer.video.viewmodel.LoginViewModel");
+    LoginViewModel["loginAnonymous"].implementation = function (str:string, str2:string, str3:string, simpleObserver:any) {
+        console.log(`LoginViewModel.loginAnonymous is called: str=${str}, str2=${str2}, str3=${str3}, simpleObserver=${simpleObserver}`);
+        this["loginAnonymous"](str, str2, str3, simpleObserver);
+    };
+//     let C01071 = Java.use("com.sealviewer.video.ChooseLoginDialogFragment$1$1$1$1");
+//     C01071["onFailure"].implementation = function (th:any) {
+//         console.log(`C01071.onFailure is called: th=${th}`);
+//         this["onSuccess"](true);
+//     };
+// }
+    // let C01071 = Java.use("com.sealviewer.video.ChooseLoginDialogFragment$1$1$1$1");
+    // C01071["onFailure"].implementation = function (th:any) {
+    //     console.log(`C01071.onFailure is called: th=${th}`);
+    //     var stackTrace = th.getStackTrace();
+    //     for (var i = 0; i < stackTrace.length; i++) {
+    //         console.log(stackTrace[i].toString());
+    //     }
+
+    //     this["onFailure"](th);
+    // };
+    // FCAnd.traceJavaMethods_custom(['E:com.sealviewer.video.viewmodel.LoginViewModel']);
+    // let AnonymousClass2 = Java.use("com.sealviewer.video.viewmodel.LoginViewModel$2");
+    // AnonymousClass2["apply"].overload('java.lang.Object').implementation = function () {
+    //     console.log(`AnonymousClass2.apply is called`);
+    //     let result = this["apply"]();
+    //     console.log(`AnonymousClass2.apply result=${result}`);
+    //     return result;
+    // };
+    // let Build = Java.use("android.os.Build");
+    // Build["MODEL"] = "Pixel 2 XL";
+    // Build["MANUFACTURER"] = "Google";
+    // Build["BRAND"] = "google";
+    // Build["PRODUCT"] = "walleye";
+    // Build["DEVICE"] = "walleye";
+    // Build["BOARD"] = "walleye";
+    // Build["HARDWARE"] = "goldfish";
+    // Build["FINGERPRINT"] = "google/walleye/walleye:8.1.0/OPM1.171019.011/4444118:user/release-keys";
+    // Build["SERIAL"] = "1234567890";
+    // Build["ID"] = "OPM1.171019.011";
+    // Build["DISPLAY"] = "OPM1.171019.011";
+    // Build["TYPE"] = "user";
+    // Build["TAGS"] = "release-keys";
+    // Build["USER"] = "android-build";
+    // Build["HOST"] = "android-build";
+    // Build["TIME"] = 1579584600000;
+    // Build["INCREMENTAL"] = "4444118";
+    // Build["RELEASE"] = "8.1.0";
+    // Build["SDK_INT"] = 27;
+    // Build["SECURE"] = true;
+    // FCAnd.traceJavaMethods_custom(['M:com.sealviewer.common.util.ToastUtils']);
+    // let ToastUtils = Java.use("com.sealviewer.common.util.ToastUtils");
+    // ToastUtils["showToast"].overload('java.lang.CharSequence', 'int').implementation = function (charSequence:string, i:number) {
+    //     console.log(`ToastUtils.showToast is called: charSequence=${charSequence}, i=${i}`);
+    //     this["showToast"](charSequence, i);
+    // };
+    // FCAnd.showStacks();
+    // let FastJsonResponseBodyConverter = Java.use("com.sealviewer.coremodel.datamodel.http.converter.JsonConverterFactory$FastJsonResponseBodyConverter");
+    // FastJsonResponseBodyConverter["convert"].overload('java.lang.Object').implementation = function (responebody:any) {
+    //     console.log(`FastJsonResponseBodyConverter.convert is called`);
+    //     let result = this["convert"](responebody);
+    //     console.log(`FastJsonResponseBodyConverter.convert result=${result}`);
+    //     return result;
+    // };
+    // FCAnd.traceJavaMethods_custom(['E:com.sealviewer.coremodel.datamodel.http.converter.JsonConverterFactory$FastJsonResponseBodyConverter']);
+    // FCAnd.traceJavaMethods_custom(['E:com.sealviewer.home.ui.LiveListActivity'])
+    
+    
+    // let GirlLiveFragment = Java.use("com.sealviewer.home.ui.GirlLiveFragment");
+    // GirlLiveFragment["onCreateView"].implementation = function (layoutInflater:any, viewGroup:any, bundle:any) {
+    //     console.log(`GirlLiveFragment.onCreateView is called: layoutInflater=${layoutInflater}, viewGroup=${viewGroup}, bundle=${bundle}`);
+    //     let result = this["onCreateView"](layoutInflater, viewGroup, bundle);
+    //     console.log(`GirlLiveFragment.onCreateView result=${result}`);
+    //     return result;
+    // };
+    let GirlAGLiveShowView = Java.use("com.sealviewer.home.widget.GirlAGLiveShowView");
+    GirlAGLiveShowView["setPayInfo"].implementation = function (str:string, f:number) {
+        console.log(`GirlAGLiveShowView.setPayInfo is called: str=${str}, f=${f}`);
+        console.log('GirlAGLiveShowView.setPayInfo str=Free')
+        this["setPayInfo"]('"whole"', 0);
+    };
+
+    // GirlAGLiveShowView["init"].implementation = function () {
+    //     console.log(`GirlAGLiveShowView.init is called`);
+    //     this["init"]();
+    //     // this.layoutGirlLiveshowBinding.clearLayout.close()
+    // };
+    // 设置观看信息
+    GirlAGLiveShowView["setRoomStatus"].implementation = function (liveRoomStatus:any) {
+        console.log(`GirlAGLiveShowView.setRoomStatus is called: liveRoomStatus=${liveRoomStatus}`);
+        console.log(`GirlAGLiveShowView.setRoomStatus liveRoomStatus.paytStatus =  ${liveRoomStatus.payStatus}`)
+        liveRoomStatus["payStatus"] = 'DirectView';
+        liveRoomStatus["payType"] = 'whole';
+        this["setRoomStatus"](liveRoomStatus);
+    };
+    // 不再倒计时
+    let LiveShowTimeView = Java.use("com.sealviewer.common.widget.LiveShowTimeView");
+    LiveShowTimeView["showType"].implementation = function (str:string, str2:string, i:number) {
+        console.log(`LiveShowTimeView.showType is called: str=${str}, str2=${str2}, i=${i}`);
+        this["showType"]('DirectView', 'whole', 10000000);
+    };
+    
+    GirlAGLiveShowView["access$310"].implementation = function (girlAGLiveShowView:any) {
+        console.log(`GirlAGLiveShowView.access$310 is called: girlAGLiveShowView=${girlAGLiveShowView}`);
+        
+    };
+
+    GirlAGLiveShowView["showAskToPay"].implementation = function (context:any, str:string) {
+        console.log(`GirlAGLiveShowView.showAskToPay is called: context=${context}, str=${str}`);
+        // this["showAskToPay"](context, str);
+    };
+    GirlAGLiveShowView["showAskToRecharge"].implementation = function (context:any) {
+        console.log(`GirlAGLiveShowView.showAskToRecharge is called: context=${context}`);
+        // this["showAskToRecharge"](context);
+    };
+    // 时间结束不再弹出
+    let AnonymousClass22 = Java.use("com.sealviewer.home.widget.GirlAGLiveShowView$22");
+    AnonymousClass22["onCountDownTimeFinish"].implementation = function () {
+        console.log(`AnonymousClass22.onCountDownTimeFinish is called`);
+    };
+
+    
+
+    // FCAnd.traceJavaMethods_custom(['E:com.sealviewer.home.widget.GirlAGLiveShowView'])
+    // let AnonymousClass1 = Java.use("com.sealviewer.home.widget.GirlAGLiveShowView$1");
+    // AnonymousClass1["onSucceed"].overload('java.lang.Object').implementation = function (a:boolean) {
+    //     console.log(`AnonymousClass1.onSucceed is called`);
+    //     this["onSucceed"](a);
+    // };
+   
+
+   
+    // GirlAGLiveShowView["getRoomStauts"].implementation = function () {
+    //     console.log(`GirlAGLiveShowView.getRoomStauts is called`);
+    //     this["getRoomStauts"]();
+    // };
+    
+    // GirlAGLiveShowView["getRoomStauts"].implementation = function () {
+    //     console.log(`GirlAGLiveShowView.getRoomStauts is called`);
+    //     this["getRoomStauts"]();
+    // };

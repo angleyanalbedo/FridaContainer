@@ -115,7 +115,7 @@ class TraceLogCleaner:
             self.mkdirSaveDir()
             script = session.create_script(jscode, runtime="v8")
             # session.enable_jit()
-            session.enable_debugger()
+            #session.enable_debugger()
             script.on('message', self.onMessage)
             script.load()
 
@@ -211,8 +211,9 @@ class TraceLogCleaner:
 if __name__ == '__main__':
     tdc = TraceLogCleaner(bFmt=True)
     tdc.clean()
-    tdc.washOnMessage('../../_fcagent.js')
+    # tdc.washOnMessage('../../_fcagent.js')
     # tdc.washWithSpawn('../../_fcagent.js', 'com.baidu.BaiduMap')
+    tdc.washWithSpawn('../../_fcagent.js', 'io.saas.ed5bdg')
 
     # tdc.washFile(path='tdc_dir/test_31523')
 
