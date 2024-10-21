@@ -49,6 +49,50 @@ function main() {
     //         });
     //     }
     // }
+    // FCAnd.traceJavaMethods_custom(["E:lqb.whwuhmm.yvig.TXVodPlayer"]);
+    // FCAnd.useWithDexClassLoader("lqb.whwuhmm.yvig.TXVodPlayer",function(cls){
+    //     let TXVodPlayer = cls;
+    //     TXVodPlayer["attachTRTC"].implementation = function (obj:any) {
+    //         console.log(`TXVodPlayer.attachTRTC is called: obj=${obj}`);
+    //         this["attachTRTC"](obj);
+    //     };
+    // });
+    // // let MainActivity = Java.use("t3ofh8ljr.muclg84.e1hpjqs.m8xxhnx6.MainActivity");
+    // // MainActivity["onCreate"].implementation = function () {
+    // //     console.log(`MainActivity.onCreate is called`);
+    // //     this["onCreate"]();
+    // // }
+    // FCAnd.enumerateClassLoadersAndUse("fvn.gbrgiji.flutter_plugin_player.s",function(cls){
+    //     let s = cls;
+    //     s["$init"].overload('android.content.Context','android.view.ViewGroup').implementation = function (context, viewGroup) {
+    //         console.log(`s.$init is called: context=${context}, viewGroup=${viewGroup}`);
+    //         this["$init"](context, viewGroup);
+    //     };
+    // })
+    // FCAnd.enumerateClassLoadersAndUse("fvn.gbrgiji.flutter_plugin_player.a",function(cls){
+    //     let a = cls;
+    //     a["e"].implementation = function () {
+    //         console.log(`a.e is called`);
+    //         let result = this["e"]();
+    //         console.log(`a.e result=${result}`);
+    //         return result;
+    //     };
+    // })
+ 
+
+    FCAnd.enumerateClassLoadersAndUse("fvn.gbrgiji.flutter_plugin_player.s",function(cls){
+        let s = cls;
+        s["b"].implementation = function (str:string, i9:number, v2TXLivePlayerObserver:any) {
+            console.log(`s.b is called: str=${str}, i9=${i9}, v2TXLivePlayerObserver=${v2TXLivePlayerObserver}`);
+            let result = this["b"](str, i9, v2TXLivePlayerObserver);
+            console.log(`s.b result=${result}`);
+            return result;
+            
+        };
+    })
+
+   
+    
 }
 
 if (Java.available) {
