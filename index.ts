@@ -162,17 +162,25 @@ function main() {
     //         return result;
     //     };
     // });
+    var findplayer = false;
+    while (!findplayer) {
+        FCAnd.enumerateClassLoadersAndUse("com.tencent.live2.impl.V2TXLivePlayerImpl",function(cls){
+            let V2TXLivePlayerImpl = cls;
+            if (V2TXLivePlayerImpl["startLivePlay"] != undefined) {
+                findplayer = true;
+                console.log(`V2TXLivePlayerImpl.startLivePlay is found`);
+            }
+            V2TXLivePlayerImpl["startLivePlay"].overload('java.lang.String').implementation = function (str:string) {
+                console.log(`V2TXLivePlayerImpl.startLivePlay is called: str=${str}`);
+                let result = this["startLivePlay"](str);
+                startVlc(str);
+                console.log(`V2TXLivePlayerImpl.startLivePlay result=${result}`);
+                return result;
+            };
+        })
     
-    FCAnd.enumerateClassLoadersAndUse("com.tencent.live2.impl.V2TXLivePlayerImpl",function(cls){
-        let V2TXLivePlayerImpl = cls;
-        V2TXLivePlayerImpl["startLivePlay"].overload('java.lang.String').implementation = function (str:string) {
-            console.log(`V2TXLivePlayerImpl.startLivePlay is called: str=${str}`);
-            let result = this["startLivePlay"](str);
-            console.log(`V2TXLivePlayerImpl.startLivePlay result=${result}`);
-            return result;
-        };
-    })
-
+    }
+    
    
     FCAnd.enumerateClassLoadersAndUse("fvn.gbrgiji.flutter_plugin_player.e", function (cls) {
         let e = cls;
@@ -216,16 +224,21 @@ function main() {
     //         this["L"](methodCall);
     //     };
     // })
-
-    FCAnd.enumerateClassLoadersAndUse("fvn.gbrgiji.flutter_plugin_player.Utils",function(cls){
-        let Utils = cls;
-        Utils["R"].implementation = function (str:string, str2:string, i9:number, str3:string) {
-            console.log(`Utils.R is called: str=${str}, str2=${str2}, i9=${i9}, str3=${str3}`);
-            let result = this["R"](str, str2, i9, str3);
-            console.log(`Utils.R result=${result}`);
-            return result;
-        };
-    })
+    var finduntils = false;
+    while(!finduntils){
+        FCAnd.enumerateClassLoadersAndUse("fvn.gbrgiji.flutter_plugin_player.Utils",function(cls){
+            let Utils = cls;
+            if (Utils["R"] != undefined) {
+                finduntils = true;
+            }
+            Utils["R"].implementation = function (str:string, str2:string, i9:number, str3:string) {
+                console.log(`Utils.R is called: str=${str}, str2=${str2}, i9=${i9}, str3=${str3}`);
+                let result = this["R"](str, str2, i9, str3);
+                console.log(`Utils.R result=${result}`);
+                return result;
+            };
+        })
+    }
 
 
 
