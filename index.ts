@@ -182,16 +182,16 @@ function main() {
     }
     
    
-    FCAnd.enumerateClassLoadersAndUse("fvn.gbrgiji.flutter_plugin_player.e", function (cls) {
-        let e = cls;
-        e["onMethodCall"].implementation = function (methodCall:any, result:any) {
-            // console.log(`e.onMethodCall is called: methodCall=${methodCall.method}, result=${result}`);
-            let str = methodCall.method.value;
-            console.log(`methos is ${str} `);
+    // FCAnd.enumerateClassLoadersAndUse("fvn.gbrgiji.flutter_plugin_player.e", function (cls) {
+    //     let e = cls;
+    //     e["onMethodCall"].implementation = function (methodCall:any, result:any) {
+    //         // console.log(`e.onMethodCall is called: methodCall=${methodCall.method}, result=${result}`);
+    //         let str = methodCall.method.value;
+    //         console.log(`methos is ${str} `);
             
-            this["onMethodCall"](methodCall, result);
-        };
-    })
+    //         this["onMethodCall"](methodCall, result);
+    //     };
+    // })
     // FCAnd.enumerateClassLoadersAndUse("io.agora.rtc2.RtcEngineConfig")
     // var findengine = false;
     // while(!findengine){
@@ -253,30 +253,30 @@ function main() {
 
     // }
 
-    var isfindengine = false;
-    while (!isfindengine) {
-        FCAnd.enumerateClassLoadersAndUse("io.agora.rtc2.RtcEngine",function(cls){
-            let RtcEngine = cls;
-            if(RtcEngine["create"] != undefined)
-            {
-                isfindengine = true;
-                console.log(`RtcEngine.create is found`)
-            }
-            RtcEngine["create"].overload('android.content.Context', 'java.lang.String', 'io.agora.rtc2.IRtcEngineEventHandler').implementation = function (context:any, str:string, iRtcEngineEventHandler:any) {
-                console.log(`RtcEngine.create is called: context=${context}, appid=${str}, iRtcEngineEventHandler=${iRtcEngineEventHandler}`);
-                let result = this["create"](context, str, iRtcEngineEventHandler);
-                console.log(`RtcEngine.create result=${result}`);
-                return result;
-            };
+    // var isfindengine = false;
+    // while (!isfindengine) {
+    //     FCAnd.enumerateClassLoadersAndUse("io.agora.rtc2.RtcEngine",function(cls){
+    //         let RtcEngine = cls;
+    //         if(RtcEngine["create"] != undefined)
+    //         {
+    //             isfindengine = true;
+    //             console.log(`RtcEngine.create is found`)
+    //         }
+    //         RtcEngine["create"].overload('android.content.Context', 'java.lang.String', 'io.agora.rtc2.IRtcEngineEventHandler').implementation = function (context:any, str:string, iRtcEngineEventHandler:any) {
+    //             console.log(`RtcEngine.create is called: context=${context}, appid=${str}, iRtcEngineEventHandler=${iRtcEngineEventHandler}`);
+    //             let result = this["create"](context, str, iRtcEngineEventHandler);
+    //             console.log(`RtcEngine.create result=${result}`);
+    //             return result;
+    //         };
             
-            RtcEngine["joinChannel"].overload('java.lang.String', 'java.lang.String', 'int', 'io.agora.rtc2.ChannelMediaOptions').implementation = function (str:string, str2:string, i9:number, channelMediaOptions:any) {
-                console.log(`RtcEngine.joinChannel is called: str=${str}, str2=${str2}, i9=${i9}, channelMediaOptions=${channelMediaOptions}`);
-                let result = this["joinChannel"](str, str2, i9, channelMediaOptions);
-                console.log(`RtcEngine.joinChannel result=${result}`);
-                return result;
-            };
-        })
-    }
+    //         RtcEngine["joinChannel"].overload('java.lang.String', 'java.lang.String', 'int', 'io.agora.rtc2.ChannelMediaOptions').implementation = function (str:string, str2:string, i9:number, channelMediaOptions:any) {
+    //             console.log(`RtcEngine.joinChannel is called: str=${str}, str2=${str2}, i9=${i9}, channelMediaOptions=${channelMediaOptions}`);
+    //             let result = this["joinChannel"](str, str2, i9, channelMediaOptions);
+    //             console.log(`RtcEngine.joinChannel result=${result}`);
+    //             return result;
+    //         };
+    //     })
+    // }
     
 
    
@@ -313,51 +313,51 @@ function main() {
     //         this["L"](methodCall);
     //     };
     // })
-    var finduntils = false;
-    while(!finduntils){
-        FCAnd.enumerateClassLoadersAndUse("fvn.gbrgiji.flutter_plugin_player.Utils",function(cls){
-            let Utils = cls;
-            if (Utils["R"] != undefined) {
-                finduntils = true;
-            }
-            Utils["R"].implementation = function (str:string, str2:string, i9:number, str3:string) {
-                console.log(`Utils.R is called: str=${str}, str2=${str2}, i9=${i9}, str3=${str3}`);
-                let result = this["R"](str, str2, i9, str3);
-                console.log(`Utils.R result=${result}`);
-                return result;
-            };
-//             let p = Java.use("fvn.gbrgiji.flutter_plugin_player.p");
-// p["p"].implementation = function (str, str2, i9, str3) {
-//     console.log(`p.p is called: str=${str}, str2=${str2}, i9=${i9}, str3=${str3}`);
-//     let result = this["p"](str, str2, i9, str3);
-//     console.log(`p.p result=${result}`);
-//     return result;
-// };
-        })
-    }
-    var findp = false;
-    while(!findp){
-        FCAnd.enumerateClassLoadersAndUse("fvn.gbrgiji.flutter_plugin_player.p",function(cls){
-            let p = cls;
-            if (p["p"] != undefined) {
-                findp = true;
+//     var finduntils = false;
+//     while(!finduntils){
+//         FCAnd.enumerateClassLoadersAndUse("fvn.gbrgiji.flutter_plugin_player.Utils",function(cls){
+//             let Utils = cls;
+//             if (Utils["R"] != undefined) {
+//                 finduntils = true;
+//             }
+//             Utils["R"].implementation = function (str:string, str2:string, i9:number, str3:string) {
+//                 console.log(`Utils.R is called: str=${str}, str2=${str2}, i9=${i9}, str3=${str3}`);
+//                 let result = this["R"](str, str2, i9, str3);
+//                 console.log(`Utils.R result=${result}`);
+//                 return result;
+//             };
+// //             let p = Java.use("fvn.gbrgiji.flutter_plugin_player.p");
+// // p["p"].implementation = function (str, str2, i9, str3) {
+// //     console.log(`p.p is called: str=${str}, str2=${str2}, i9=${i9}, str3=${str3}`);
+// //     let result = this["p"](str, str2, i9, str3);
+// //     console.log(`p.p result=${result}`);
+// //     return result;
+// // };
+//         })
+//     }
+//     var findp = false;
+//     while(!findp){
+//         FCAnd.enumerateClassLoadersAndUse("fvn.gbrgiji.flutter_plugin_player.p",function(cls){
+//             let p = cls;
+//             if (p["p"] != undefined) {
+//                 findp = true;
 
-            }
-            p["p"].implementation = function (str:string, str2:string, i9:number, str3:string) {
-                console.log(`p.p is called: str=${str}, str2=${str2}, i9=${i9}, str3=${str3}`);
-                // str="1282000136"
-                // i9 = 886838839
-                // str2 = "007eJxSYFhSx9e8dG2n1oGmLYvFVv4pXbM/dbtIcVuEw3vpvD1OV7kUGMzMjFOMk0xN0gyNk0wSDZMsLBKTk40NU80sDS0sLSwsnQUk0xsCGRkirA4zMzJAIIjPyKDFyWBhYWZhbGFhbA4IAAD///EcHqQ="
-                let result = this["p"](str, str2, i9, str3);
-                console.log(`p.p result=${result}`);
-                // console.log(`playsrc = ${this.mediaPlayerGetPlaySrc(i9)}`);
-                return result;
-            };
-        })
+//             }
+//             p["p"].implementation = function (str:string, str2:string, i9:number, str3:string) {
+//                 console.log(`p.p is called: str=${str}, str2=${str2}, i9=${i9}, str3=${str3}`);
+//                 // str="1282000136"
+//                 // i9 = 886838839
+//                 // str2 = "007eJxSYFhSx9e8dG2n1oGmLYvFVv4pXbM/dbtIcVuEw3vpvD1OV7kUGMzMjFOMk0xN0gyNk0wSDZMsLBKTk40NU80sDS0sLSwsnQUk0xsCGRkirA4zMzJAIIjPyKDFyWBhYWZhbGFhbA4IAAD///EcHqQ="
+//                 let result = this["p"](str, str2, i9, str3);
+//                 console.log(`p.p result=${result}`);
+//                 // console.log(`playsrc = ${this.mediaPlayerGetPlaySrc(i9)}`);
+//                 return result;
+//             };
+//         })
         
         
 
-    }
+//     }
    
 
 }
